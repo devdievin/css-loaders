@@ -1,0 +1,194 @@
+@import "./partials/colors.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: sans-serif;
+    background-color: $softWhite;
+    color: $softBlack;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    color: rgba($color: $softBlack, $alpha: 0.55);
+}
+
+.container {
+    width: 100%;
+    height: 200px;
+    background-color: $softGray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.loading1 {
+    width: 80px;
+    height: 80px;
+    border: 0.5rem solid rgba($color: $softBlack, $alpha: 0.15);
+    border-left-color: tomato;
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+}
+
+.loading2 {
+    display: flex;
+    div {
+        width: 10px;
+        height: 10px;
+        background-color: rgba($color: $softBlack, $alpha: 0.15);
+        border-radius: 50%;
+        margin-left: 0.625rem;
+    }
+
+    div:nth-child(1) {
+        animation: pulse 1.55s 0s linear infinite;
+    }
+    div:nth-child(2) {
+        animation: pulse 1.55s 0.5s linear infinite;
+    }
+    div:nth-child(3) {
+        animation: pulse 1.55s 1s linear infinite;
+    }
+}
+
+.loading3 {
+    display: flex;
+
+    div {
+        width: 0.5rem;
+        height: 2.5rem;
+        background-color: rgba($color: $softBlack, $alpha: 0.15);
+        margin-left: 0.875rem;
+    }
+
+    div:nth-child(1) {
+        animation: pulse 1.25s 0s linear infinite;
+    }
+    div:nth-child(2) {
+        animation: pulse 1.25s 0.25s linear infinite;
+    }
+    div:nth-child(3) {
+        animation: pulse 1.25s 0.5s linear infinite;
+    }
+}
+
+.loading4 {
+    display: flex;
+
+    div {
+        width: 0.5rem;
+        height: 2.5rem;
+        background-color: rgba($color: $softBlack, $alpha: 0.15);
+        border-radius: 0.25rem;
+        margin-left: 0.875rem;
+    }
+
+    div:nth-child(1) {
+        animation: pulse 1.5s 0.5s linear infinite;
+    }
+    div:nth-child(2) {
+        animation: pulse 1.5s 0s linear infinite;
+    }
+    div:nth-child(3) {
+        animation: pulse 1.5s 0.75s linear infinite;
+    }
+    div:nth-child(4) {
+        animation: pulse 1.5s 1s linear infinite;
+    }
+}
+
+.loading5 {
+    p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: tomato;
+
+        span:nth-child(1) {
+            animation: fade 1.25s 0s linear infinite;
+        }
+        span:nth-child(2) {
+            animation: fade 1.25s 0.25s linear infinite;
+        }
+        span:nth-child(3) {
+            animation: fade 1.25s 0.5s linear infinite;
+        }
+    }
+}
+
+.loading6 {
+    p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: rgba($color: $softBlack, $alpha: 0.5);
+
+        span:nth-child(1) {
+            animation: fade 1.25s 0s linear infinite;
+        }
+        span:nth-child(2) {
+            animation: fade 1.25s 0.25s linear infinite;
+        }
+        span:nth-child(3) {
+            animation: fade 1.25s 0.5s linear infinite;
+        }
+        span:nth-child(4) {
+            animation: fade 1.25s 0.75s linear infinite;
+        }
+        span:nth-child(5) {
+            animation: fade 1.25s 1s linear infinite;
+        }
+        span:nth-child(6) {
+            animation: fade 1.25s 1.25s linear infinite;
+        }
+        span:nth-child(7) {
+            animation: fade 1.25s 1.5s linear infinite;
+        }
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+        background-color: tomato;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    50% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
